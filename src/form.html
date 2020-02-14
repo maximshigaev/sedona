@@ -8,6 +8,132 @@
 	<title>Sedona</title>
 </head>
 <body>
-
+	<header class="header">
+		<div class="wrapper">
+			<picture class="header__landscape">
+				<source media="(min-width:768px)" srcset="img/header/back-desktop.jpg">
+				<img class="header__image" src="img/header/back-mobile.jpg" alt="Sedona">
+			</picture>
+			<nav class="header__navigation">
+				<ul class="header__list">
+					<li class="header__item">
+						<a class="header__link" href="index.html" title="Главная">Главная</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#" title="Фото и видео">Фото и видео</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link">Форма отзыва</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#" title="Html Academy">Html Academy</a>
+					</li>
+				</ul>
+				<picture class="header__logo">
+					<source media="(min-width:1200px)" srcset="img/header/logo-sedona-desktop.svg">
+					<source media="(min-width:768px)" srcset="img/header/logo-sedona-tablet.svg">
+					<a class="header__logoLink" href="index.html">
+						<img class="header__logoImage" src="img/header/logo-sedona-mobile.svg" alt="Логотип Sedona"
+							title="Логотип Sedona" width="102" height="84"
+						>
+					</a>
+				</picture>
+				<button class="header__openButton"></button>
+				<button class="header__closeButton"></button>
+			</nav>
+		</div>
+	</header>
+	<main class="formPage">
+		<div class="wrapper">
+			<section class="feedback">
+				<h1 class="feedback__title">Оставьте свой отзыв</h1>
+				<p class="feedback__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных
+					вами достопримечательностях
+				</p>
+				<form class="feedback__form" action="https://echo.htmlacademy.ru/" method="POST">
+					<fieldset class="feedback__opinion">
+						<legend class="feedback__legend">Ваше общее впечатление:</legend>
+						<input class="visuallyHidden" type="radio" name="good" id="good" checked>
+						<label class="feedback__label" for="good">Скорее положительное</label>
+						<input class="visuallyHidden" type="radio" name="bad" id="bad">
+						<label class="feedback__label" for="bad">Скорее отрицательное</label>
+						<input class="visuallyHidden" type="radio" name="hard" id="hard">
+						<label class="feedback__label" for="hard">Затрудняюсь ответить</label>
+					</fieldset>
+					<fieldset class="feedback__personal">
+						<legend class="feedback__legend">Представьтесь:</legend>
+						<input type="text" name="firstName" id="firstName" placeholder="Петр" required>
+						<label class="feedback__title" for="firstName">Имя*:</label>
+						<input type="text" name="secondName" id="secondName" placeholder="Иванов">
+						<label class="feedback__title" for="secondName" required>Фамилия*:</label>
+						<input type="text" name="thirdName" id="thirdName" placeholder="Александрович">
+						<label class="feedback__title" for="thirdName">Отчество:</label>
+					</fieldset>
+					<fieldset class="feedback__contacts">
+						<legend class="feedback__legend">Контактная информация:</legend>
+						<input type="tel" name="tel" id="tel" placeholder="Введите телефон">
+						<label class="feedback__title" for="tel" required>Телефон*:</label>
+						<input type="email" name="email" id="email" placeholder="Введите e-mail">
+						<label class="feedback__title" for="email" required>Электронная почта*:</label>
+					</fieldset>
+					<fieldset class="feedback__landmarks">
+						<legend class="feedback__legend">Посещенные достопримечательности:</legend>
+						<input class="visuallyHidden" type="checkbox" name="bridge" id="bridge" checked>
+						<label class="feedback__label" for="bridge">Мост Дьявола</label>
+						<input class="visuallyHidden" type="checkbox" name="mount" id="mount" checked>
+						<label class="feedback__label" for="mount">Гора-Колокол</label>
+						<input class="visuallyHidden" type="checkbox" name="park" id="park" checked>
+						<label class="feedback__label" for="park">Гора-Колокол</label>
+						<input class="visuallyHidden" type="checkbox" name="rocks" id="rocks">
+						<label class="feedback__label" for="rocks">Красные скалы</label>
+					</fieldset>
+					<p class="feedback__legend">Опишите свои эмоции:</p>
+					<textarea class="feedback__emotions" name="emotions"
+						placeholder="Опишите подробно все свои восторги "></textarea>
+					<a class="button feedback__button" href="#">Отправить отзыв</a>
+					<p class="feedback__clarity">*-обязательные поля</p>
+				</form>
+			</section>
+		</div>
+		<footer class="footer">
+			<div class="wrapper">
+				<p class="footer__hashtag">#visitSEDONA</p>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a class="footer__link" href="https://twitter.com" title="Твиттер">
+							<span class="visuallyHidden">Твиттер</span>
+						</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="https://facebook.com" title="Фейсбук">
+							<span class="visuallyHidden">Фейсбук</span>
+						</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="https://youtube.com" title="Ютьюб">
+							<span class="visuallyHidden">Ютьюб</span>
+						</a>
+					</li>
+				</ul>
+				<p class="footer__info">
+					<span class="footer__developer">Разработано</span>
+					<a class="footer__infoLink" href="#" title="Html Academy"></a>
+				</p>
+			</div>
+		</footer>
+		<section class="hidden modal modal--failure">
+			<h2 class="modal__title">Что-то пошло не так!</h2>
+			<p class="modal__content">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+			<a class="button modal__button" href="#" title="Ок">Ок</a>
+		</section>
+		<section class="hidden modal modal--success">
+			<h2 class="modal__title">Ваш отзыв отправлен!</h2>
+			<p class="modal__content">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
+				опубликуем его на сайте.
+			</p>
+			<a class="button modal__button" href="#"  title="Закрыть окно">Закрыть окно</a>
+		</section>
+		<div class="hidden overlay"></div>
+	</main>
 </body>
 </html>
