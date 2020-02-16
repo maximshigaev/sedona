@@ -30,8 +30,12 @@ body {
   margin: 0;
   padding: 0;
 
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
   font-family: $mainFont;
   color: black;
+  text-transform: uppercase;
 
   background-color: white;
 }
@@ -70,6 +74,11 @@ fieldset {
   border: none;
 }
 
+input,
+textarea {
+  font: inherit;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -77,6 +86,21 @@ img {
 
 button {
   border: none;
+}
+
+.wrapper {
+  width: $mobileScreen;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tabletScreen) {
+    min-width: $tabletScreen;
+    padding: 0;
+  }
+
+  @media (min-width: $desctopScreen) {
+    min-width: $desctopScreen;
+  }
 }
 
 .visuallyHidden {

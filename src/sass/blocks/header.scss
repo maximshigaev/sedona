@@ -1,0 +1,241 @@
+.header__navigation {
+  position: relative;
+
+  min-height: 56px;
+}
+
+.header__list {
+  display: none;
+}
+
+.header__item {
+  border-top: 2px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.header__link {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 12px;
+
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: $bluishColor;
+
+  &:active {
+    background-color: $bluishActiveColor;
+  }
+}
+
+.header__logoLink {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+
+  transform: translate(-50%);
+}
+
+.header__closeButton,
+.header__openButton {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+
+  width: 23px;
+  height: 22px;
+
+  background-color: transparent;
+}
+
+.header__closeButton {
+  display: none;
+
+  background-image: url('../img/header/icon-cross.svg');
+
+  &:active {
+	background-image: url('../img/header/icon-cross-active.svg');
+  }
+}
+
+.header__openButton {
+  background-image: url('../img/header/icon-menu.svg');
+
+   &:active {
+	background-image: url('../img/header/icon-menu-active.svg');
+  }
+}
+
+.header__photoContainer {
+  min-height: 389px;
+  padding-top: 90px;
+
+  text-align: center;
+
+  background-color: red;
+  background-image: url('../img/header/bg-intro-triangle-mobile.svg'), url('../img/header/back-mobile.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, 50% top;
+  background-size: contain, cover;
+
+  &--inner {
+    min-height: 158px;
+    padding-top: 52px;
+
+    background-image: url('../img/header/bg-intro-triangle-mobile.svg'), url('../img/header/back-mobile.jpg');
+    background-position: left bottom, 50% bottom;
+    background-size: contain, auto;
+  }
+}
+
+.header__textImage {
+  width: 282px;
+  height: 214px;
+}
+
+.header__photoContainer--inner .header__textImage {
+  width: 229px;
+  height: 39px;
+}
+
+@media (max-width: 767px) {
+  .header__list.no-js {
+    display: block;
+    padding-bottom: 56px;
+  }
+
+  .header__list.no-js ~ .header__closeButton {
+    display: block;
+  }
+
+  .header__list.no-js ~ .header__openButton {
+    display: none;
+  }
+}
+
+@media (min-width: $tabletScreen) {
+  .header__closeButton {
+    display: none;
+  }
+
+  .header__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+
+  .header__item {
+    width: 20%;
+
+    border: none;
+
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+  }
+
+  .header__link {
+    padding-top: 14px;
+    padding-bottom: 15px;
+
+    font-size: 14px;
+    color: black;
+
+    background-color: white;
+
+    &:hover,
+    &:focus {
+      color: $bluishColor;
+    }
+
+    &:active {
+      color: black;
+
+      background-color: white;
+      opacity: 0.3;
+    }
+
+    &--current {
+      color: #766357;
+
+      &:hover,
+      &:focus {
+        color: #604e43;
+      }
+
+      &:active {
+        color: #766357;
+
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .header__logoLink {
+    top: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 1px solid $bluishColor;
+    }
+  }
+
+  .header__openButton {
+    display: none;
+  }
+
+  .header__photoContainer {
+    min-height: 518px;
+    padding-top: 77px;
+
+    background-image: url('../img/header/bg-intro-triangle-tablet.svg'), url('../img/header/back-desktop.jpg');
+
+    &--inner {
+      min-height: 290px;
+      padding-top: 95px;
+    }
+  }
+
+  .header__textImage {
+    width: 460px;
+    height: 350px;
+  }
+
+  .header__photoContainer--inner .header__textImage {
+    width: 458px;
+    height: 78px;
+  }
+}
+
+@media (min-width: $desctopScreen) {
+  .header__link {
+    padding-bottom: 17px;
+  }
+
+  .header__photoContainer {
+    background-image: url('../img/header/bg-intro-triangle-desktop.svg'), url('../img/header/back-desktop.jpg');
+
+    &--inner {
+      min-height: 300px;
+      padding-top: 102px;
+
+      background-size: contain, cover;
+    }
+  }
+
+  .header__photoContainer--inner .header__textImage {
+    width: 461px;
+    height: 79px;
+  }
+}

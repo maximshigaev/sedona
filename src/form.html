@@ -4,44 +4,40 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
 	<title>Sedona</title>
 </head>
 <body>
 	<header class="header">
-		<div class="wrapper">
-			<picture class="header__landscape">
-				<source media="(min-width:768px)" srcset="img/header/back-desktop.jpg">
-				<img class="header__image" src="img/header/back-mobile.jpg" alt="Sedona">
-			</picture>
-			<img class="header__textImage" src="img/header/text-sedona.svg" alt="Sedona" width="460" height="80">
-			<nav class="header__navigation">
-				<ul class="header__list">
-					<li class="header__item">
-						<a class="header__link" href="index.html" title="Главная">Главная</a>
-					</li>
-					<li class="header__item">
-						<a class="header__link" href="photo.html" title="Фото и видео">Фото и видео</a>
-					</li>
-					<li class="header__item">
-						<a class="header__link">Форма отзыва</a>
-					</li>
-					<li class="header__item">
-						<a class="header__link" href="#" title="Html Academy">Html Academy</a>
-					</li>
-				</ul>
+		<nav class="header__navigation">
+			<ul class="header__list no-js">
+				<li class="header__item">
+					<a class="header__link" href="index.html" title="Главная">Главная</a>
+				</li>
+				<li class="header__item">
+					<a class="header__link" href="photo.html" title="Фото и видео">Фото и видео</a>
+				</li>
+				<li class="header__item">
+					<a class="header__link header__link--current" href="#">Форма отзыва</a>
+				</li>
+				<li class="header__item">
+					<a class="header__link" href="#" title="Html Academy">Html Academy</a>
+				</li>
+			</ul>
+			<a class="header__logoLink" href="index.html">
 				<picture class="header__logo">
 					<source media="(min-width:1200px)" srcset="img/header/logo-sedona-desktop.svg">
 					<source media="(min-width:768px)" srcset="img/header/logo-sedona-tablet.svg">
-					<a class="header__logoLink" href="index.html">
-						<img class="header__logoImage" src="img/header/logo-sedona-mobile.svg" alt="Логотип Sedona"
-							title="Логотип Sedona" width="102" height="84"
-						>
-					</a>
+					<img class="header__logoImage" src="img/header/logo-sedona-mobile.svg" alt="Логотип Sedona"
+						title="Логотип Sedona"
+					>
 				</picture>
-				<button class="header__openButton"></button>
-				<button class="header__closeButton"></button>
-			</nav>
+			</a>
+			<button class="header__openButton"></button>
+			<button class="header__closeButton"></button>
+		</nav>
+		<div class="header__photoContainer header__photoContainer--inner">
+			<img class="header__textImage" src="img/header/text-sedona.svg" alt="Sedona">
 		</div>
 	</header>
 	<main class="formPage">
@@ -63,19 +59,19 @@
 					</fieldset>
 					<fieldset class="feedback__personal">
 						<legend class="feedback__legend">Представьтесь:</legend>
-						<input type="text" name="firstName" id="firstName" placeholder="Петр" required>
 						<label class="feedback__title" for="firstName">Имя*:</label>
-						<input type="text" name="secondName" id="secondName" placeholder="Иванов">
-						<label class="feedback__title" for="secondName" required>Фамилия*:</label>
-						<input type="text" name="thirdName" id="thirdName" placeholder="Александрович">
+						<input type="text" name="firstName" id="firstName" placeholder="Петр" required>
+						<label class="feedback__title" for="secondName">Фамилия*:</label>
+						<input type="text" name="secondName" id="secondName" placeholder="Иванов" required>
 						<label class="feedback__title" for="thirdName">Отчество:</label>
+						<input type="text" name="thirdName" id="thirdName" placeholder="Александрович">
 					</fieldset>
 					<fieldset class="feedback__contacts">
 						<legend class="feedback__legend">Контактная информация:</legend>
-						<input type="tel" name="tel" id="tel" placeholder="Введите телефон">
-						<label class="feedback__title" for="tel" required>Телефон*:</label>
-						<input type="email" name="email" id="email" placeholder="Введите e-mail">
-						<label class="feedback__title" for="email" required>Электронная почта*:</label>
+						<label class="feedback__title" for="tel">Телефон*:</label>
+						<input type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
+						<label class="feedback__title" for="email">Электронная почта*:</label>
+						<input type="email" name="email" id="email" placeholder="Введите e-mail" required>
 					</fieldset>
 					<fieldset class="feedback__landmarks">
 						<legend class="feedback__legend">Посещенные достопримечательности:</legend>
@@ -91,7 +87,7 @@
 					<p class="feedback__legend">Опишите свои эмоции:</p>
 					<textarea class="feedback__emotions" name="emotions"
 						placeholder="Опишите подробно все свои восторги "></textarea>
-					<a class="button feedback__button" href="#">Отправить отзыв</a>
+					<button class="button feedback__button" type="submit">Отправить отзыв</button>
 					<p class="feedback__clarity">*-обязательные поля</p>
 				</form>
 			</section>
