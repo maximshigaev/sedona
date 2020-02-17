@@ -88,21 +88,6 @@ button {
   border: none;
 }
 
-.wrapper {
-  width: $mobileScreen;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  @media (min-width: $tabletScreen) {
-    min-width: $tabletScreen;
-    padding: 0;
-  }
-
-  @media (min-width: $desctopScreen) {
-    min-width: $desctopScreen;
-  }
-}
-
 .visuallyHidden {
   position: absolute;
 

@@ -64,15 +64,15 @@
   background-image: url('../img/header/icon-cross.svg');
 
   &:active {
-	background-image: url('../img/header/icon-cross-active.svg');
+    background-image: url('../img/header/icon-cross-active.svg');
   }
 }
 
 .header__openButton {
   background-image: url('../img/header/icon-menu.svg');
 
-   &:active {
-	background-image: url('../img/header/icon-menu-active.svg');
+  &:active {
+    background-image: url('../img/header/icon-menu-active.svg');
   }
 }
 
@@ -82,10 +82,10 @@
 
   text-align: center;
 
-  background-color: red;
+  background-color: black;
   background-image: url('../img/header/bg-intro-triangle-mobile.svg'), url('../img/header/back-mobile.jpg');
   background-repeat: no-repeat, no-repeat;
-  background-position: left bottom, 50% top;
+  background-position: bottom, 50% top;
   background-size: contain, cover;
 
   &--inner {
@@ -183,7 +183,9 @@
 
   .header__logoLink {
     top: 0;
+  }
 
+  .header__logoLink[href] {
     &:hover,
     &:focus,
     &:active {

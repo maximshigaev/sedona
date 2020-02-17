@@ -1,0 +1,348 @@
+.reasons {
+  padding-top: 40px;
+}
+
+.reasons__heading {
+  margin-bottom: 27px;
+  padding-right: 32px;
+  padding-left: 32px;
+
+  font-size: 18px;
+  text-align: center;
+}
+
+.reasons__intro {
+  padding-right: 32px;
+  padding-bottom: 5px;
+  padding-left: 32px;
+
+  font-weight: 400;
+  text-align: center;
+  color: #333333;
+}
+
+.reasons__item {
+  text-align: center;
+
+  &--common {
+    padding-top: 27px;
+    padding-right: 20px;
+    padding-bottom: 27px;
+    padding-left: 20px;
+
+    background-color: #eeeeee;
+    border-bottom: 1px solid #d6d6d6;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.reasons__photoContainer {
+  color: white;
+
+  background-color: $bluishColor;
+}
+
+.reasons__item--top .reasons__photoContainer {
+  min-height: 490px;
+  padding-top: calc(11.6% + 40px);
+
+  background-image: url('../img/reasons/bg-triangle.svg'), url('../img/reasons/photo-city-mobile.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, bottom;
+  background-size: contain, auto;
+}
+
+.reasons__item--bottom .reasons__photoContainer {
+  min-height: 450px;
+  padding-top: 39px;
+
+  background-image: url('../img/reasons/photo-bridge-mobile.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.reasons__title {
+  margin-bottom: 6px;
+
+  font-size: 18px;
+  text-align: center;
+}
+
+.reasons__number {
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.reasons__content {
+  margin-top: 13px;
+  padding-right: 17px;
+  padding-left: 17px;
+
+  font-weight: 400;
+  line-height: 21px;
+
+  &--dark {
+    color: #333333;
+  }
+}
+
+.reasons__featuresItem {
+  position: relative;
+
+  padding-top: 27px;
+  padding-right: 41px;
+  padding-left: 69px;
+
+  text-align: left;
+
+  &::before {
+    background-size: contain;
+
+    @include pseudoElement();
+  }
+
+  &--house {
+    padding-top: 35px;
+
+    &::before {
+      top: 26px;
+      left: 21px;
+
+      width: 39px;
+      height: 37px;
+
+      background-image: url('../img/reasons/icon-house.svg');
+    }
+  }
+
+  &--gifts {
+    &::before {
+      top: 16px;
+      left: 25px;
+
+      width: 32px;
+      height: 38px;
+
+      background-image: url('../img/reasons/icon-gift.svg');
+    }
+  }
+
+  &--food {
+    margin-bottom: 37px;
+
+    &::before {
+      top: 23px;
+      left: 18px;
+
+      width: 40px;
+      height: 35px;
+
+      background-image: url('../img/reasons/icon-burger.svg');
+    }
+  }
+}
+
+.reasons__featuresTitle {
+  margin-bottom: 15px;
+
+  font-size: 18px;
+}
+
+.reasons__featuresContent {
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+}
+
+.reasons__item br {
+  display: none;
+}
+
+@media (min-width: $tabletScreen) {
+  .reasons {
+    padding-top: 50px;
+  }
+
+  .reasons__heading {
+    margin-bottom: 28px;
+    padding-right: 140px;
+    padding-left: 140px;
+
+    font-size: 21px;
+    letter-spacing: 0.2px;
+  }
+
+  .reasons__intro {
+    margin-bottom: 45px;
+
+    letter-spacing: 0.1px;
+  }
+
+  .reasons__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .reasons__item {
+    &--top,
+    &--bottom {
+      width: 100%;
+    }
+
+    &--common {
+      width: calc(100% / 3);
+      padding-top: 45px;
+      padding-right: 49px;
+      padding-bottom: 42px;
+      padding-left: 49px;
+    }
+
+    &:nth-child(4) {
+      padding-right: 63px;
+      padding-left: 61px;
+    }
+  }
+
+  .reasons__item--top .reasons__photoContainer {
+    min-height: 256px;
+    padding-top: 45px;
+    padding-right: 559px;
+    padding-left: 47px;
+
+    background-image: url('../img/reasons/photo-city-tablet.jpg');
+    background-position: right;
+  }
+
+  .reasons__item--bottom .reasons__photoContainer {
+    min-height: 256px;
+    padding-top: 45px;
+    padding-right: 51px;
+    padding-left: 563px;
+
+    background-image: url('../img/reasons/photo-bridge-tablet.jpg');
+    background-position: left;
+  }
+
+  .reasons__content {
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .reasons__title {
+    font-size: 21px;
+  }
+
+  .reasons__featuresList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .reasons__featuresItem {
+    width: calc(100% / 3);
+    margin-bottom: 61px;
+    padding-top: 158px;
+    padding-right: 46px;
+    padding-left: 46px;
+
+    text-align: center;
+
+    &--house {
+      &::before {
+        top: 60px;
+        left: 50%;
+
+        width: 75px;
+        height: 72px;
+
+        transform: translate(-50%);
+      }
+    }
+
+    &--gifts {
+      order: 2;
+
+      &::before {
+        top: 57px;
+        left: 50%;
+
+        width: 64px;
+        height: 75px;
+
+        transform: translate(-50%);
+      }
+    }
+
+    &--food {
+      order: 1;
+      padding-right: 52px;
+      padding-left: 53px;
+
+      &::before {
+        top: 63px;
+        left: 50%;
+
+        width: 77px;
+        height: 68px;
+
+        transform: translate(-50%);
+      }
+    }
+  }
+
+  .reasons__featuresTitle {
+    margin-bottom: 21px;
+
+    font-size: 21px;
+  }
+
+  .reasons__title br {
+    display: inline;
+  }
+}
+
+@media (min-width: $desctopScreen) {
+  .reasons__heading,
+  .reasons__intro {
+    padding-right: 355px;
+    padding-left: 355px;
+  }
+
+  .reasons__item--top .reasons__photoContainer {
+    padding-top: 52px;
+    padding-right: 867px;
+    padding-left: 68px;
+
+    background-image: url('../img/reasons/photo-city-desktop.jpg');
+    background-size: auto;
+  }
+
+  .reasons__item--bottom .reasons__photoContainer {
+    padding-top: 52px;
+    padding-right: 93px;
+    padding-left: 893px;
+
+    background-image: url('../img/reasons/photo-bridge-desktop.jpg');
+    background-size: auto;
+  }
+
+  .reasons__title {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .reasons__featuresItem {
+    margin-bottom: 83px;
+  }
+
+  .reasons__item--common {
+    padding-bottom: 65px;
+  }
+
+  .reasons__item--common .reasons__title {
+    padding-right: 79px;
+    padding-left: 79px;
+  }
+}

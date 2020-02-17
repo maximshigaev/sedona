@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "webpack-dev-server --mode development --open",
-		"build": "webpack --mode production",
+		"build": "npm run clean && webpack --mode production",
 		"clean": "rimraf build",
 		"htmlhint": "htmlhint src/index.html",
 		"stylelint": "stylelint src/sass"
