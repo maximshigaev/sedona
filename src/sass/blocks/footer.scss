@@ -1,0 +1,127 @@
+.footer {
+  padding-top: 36px;
+}
+
+.footer__hashtag {
+  margin-bottom: 36px;
+
+  font-size: 21px;
+  text-align: center;
+}
+
+.footer__list {
+  margin-bottom: 40px;
+
+  font-size: 0;
+  text-align: center;
+}
+
+.footer__item {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  margin-right: 6px;
+
+  font-size: 14px;
+  vertical-align: middle;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__link {
+  display: block;
+  height: 100%;
+
+  background-color: $bluishColor;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover,
+  &:focus {
+    background-color: $bluishHoverColor;
+  }
+
+  &:active {
+    background-color: $bluishActiveColor;
+    opacity: 0.3;
+  }
+
+  &--tw {
+    background-image: url('../img/footer/icon-twitter.svg');
+  }
+
+  &--fb {
+    background-image: url('../img/footer/icon-facebook.svg');
+  }
+
+  &--yt {
+    background-image: url('../img/footer/icon-youtube.svg');
+  }
+}
+
+.footer__info {
+  margin-bottom: 23px;
+  text-align: center;
+}
+
+.footer__developer {
+  margin-right: 10px;
+
+  font-weight: 400;
+}
+
+.footer__infoLink {
+  display: inline-block;
+  width: 27px;
+  height: 34px;
+
+  vertical-align: middle;
+
+  background-image: url('../img/footer/htmlacademy.svg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 150%;
+
+  &:hover,
+  &:focus {
+    background-image: url('../img/footer/htmlacademy-hover.svg');
+  }
+
+  &:active {
+    background-image: url('../img/footer/htmlacademy-active.svg');
+  }
+}
+
+@media (min-width: $tabletScreen) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -7px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .footer__hashtag {
+    width: 158px;
+    margin-top: 10px;
+  }
+
+  .footer__list {
+    width: 151px;
+  }
+
+  .footer__info {
+    width: 151px;
+    padding-top: 7px;
+    padding-left: 22px;
+  }
+}
+
+@media (min-width: $desktopScreen) {
+  .footer {
+    padding-right: 120px;
+    padding-left: 120px;
+  }
+}

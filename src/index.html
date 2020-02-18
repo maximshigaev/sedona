@@ -28,7 +28,9 @@
 				<picture class="header__logo">
 					<source media="(min-width:1200px)" srcset="img/header/logo-sedona-desktop.svg">
 					<source media="(min-width:768px)" srcset="img/header/logo-sedona-tablet.svg">
-					<img class="header__logoImage" src="img/header/logo-sedona-mobile.svg" alt="Логотип Sedona">
+					<img class="header__logoImage" src="img/header/logo-sedona-mobile.svg" alt="Логотип Sedona"
+						width="102" height="84"
+					>
 				</picture>
 			</a>
 			<button class="header__openButton"></button>
@@ -55,11 +57,15 @@
 						<ul class="reasons__featuresList">
 							<li class="reasons__featuresItem reasons__featuresItem--house">
 								<h2 class="reasons__featuresTitle">Жилье</h2>
-								<p class="reasons__featuresContent">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+								<p class="reasons__featuresContent">
+									Рекомендуем пожить в настоящем мотеле, все как в кино!
+								</p>
 							</li>
 							<li class="reasons__featuresItem reasons__featuresItem--gifts">
 								<h2 class="reasons__featuresTitle">Сувениры</h2>
-								<p class="reasons__featuresContent">Не только китайского, <br> но и местного производства!</p>
+								<p class="reasons__featuresContent">
+									Не только китайского, <br> но и местного производства!
+								</p>
 							</li>
 							<li class="reasons__featuresItem reasons__featuresItem--food">
 								<h2 class="reasons__featuresTitle">Еда</h2>
@@ -79,61 +85,65 @@
 					<li class="reasons__item reasons__item--common">
 						<h3 class="reasons__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
 						<span class="reasons__number">— №3 —</span>
-						<p class="reasons__content reasons-content--dark">ВСЕ интересные места находятся очень близко</p>
+						<p class="reasons__content reasons-content--dark">
+							ВСЕ интересные места находятся очень близко
+						</p>
 					</li>
 					<li class="reasons__item reasons__item--common">
 						<h3 class="reasons__title">КРАСИВАЯ ДОРОГА</h3>
 						<span class="reasons__number">— №4 —</span>
-						<p class="reasons__content reasons-content--dark">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+						<p class="reasons__content reasons-content--dark">
+							ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
+						</p>
 					</li>
 					<li class="reasons__item reasons__item--common">
 						<h3 class="reasons__title">МАЛО ТУРИСТОВ</h3>
 						<span class="reasons__number">— №5 —</span>
-						<p class="reasons__content reasons-content--dark">Большинство едет в гранд каньон и толпится там</p>
+						<p class="reasons__content reasons-content--dark">
+							Большинство едет в гранд каньон и толпится там
+						</p>
 					</li>
 				</ul>
-				<p class="reasons__question">Заинтересовались?</p>
-				<p class="reasons__intro">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
-					гостиниц в седоне
-				</p>
-				<a class="button reasons__button" href="#" title="Найти гостиницу">Найти гостиницу</a>
+				<div class="reasons__interest">
+					<p class="reasons__question">Заинтересовались?</p>
+					<p class="reasons__intro reasons__intro--shrink">
+						Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Cедоне
+					</p>
+					<a class="button reasons__button" href="#" title="Найти гостиницу">Найти гостиницу</a>
+				</div>
 			</div>
 		</section>
 		<section class="map">
 			<h2 class="visuallyHidden">Карта проезда</h2>
-			<div class="wrapper">
-				<picture class="map__picture">
-					<source media="(min-width:1200px)" srcset="img/map/map-desktop.jpg">
-					<source media="(min-width:768px)" srcset="img/map/map-tablet.jpg">
-					<img class="map__image" src="img/map/map-mobile.jpg" alt="Карта проезда" title="Карта проезда">
-				</picture>
-			</div>
+			<iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1540998.
+				749846576!2d-111.67507832122524!3d34.650407078969195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+				1!5e0!3m2!1sru!2sru!4v1582021393415!5m2!1sru!2sru" allowfullscreen=""
+			>
+			</iframe>
 		</section>
 		<footer class="footer">
-			<div class="wrapper">
-				<p class="footer__hashtag">#visitSEDONA</p>
-				<ul class="footer__list">
-					<li class="footer__item">
-						<a class="footer__link" href="https://twitter.com" title="Твиттер">
-							<span class="visuallyHidden">Твиттер</span>
-						</a>
-					</li>
-					<li class="footer__item">
-						<a class="footer__link" href="https://facebook.com" title="Фейсбук">
-							<span class="visuallyHidden">Фейсбук</span>
-						</a>
-					</li>
-					<li class="footer__item">
-						<a class="footer__link" href="https://youtube.com" title="Ютьюб">
-							<span class="visuallyHidden">Ютьюб</span>
-						</a>
-					</li>
-				</ul>
-				<p class="footer__info">
-					<span class="footer__developer">Разработано</span>
-					<a class="footer__infoLink" href="#" title="Html Academy"></a>
-				</p>
-			</div>
+			<p class="footer__hashtag">#visitSEDONA</p>
+			<ul class="footer__list">
+				<li class="footer__item">
+					<a class="footer__link footer__link--tw" href="https://twitter.com" title="Твиттер">
+						<span class="visuallyHidden">Твиттер</span>
+					</a>
+				</li>
+				<li class="footer__item">
+					<a class="footer__link footer__link--fb" href="https://facebook.com" title="Фейсбук">
+						<span class="visuallyHidden">Фейсбук</span>
+					</a>
+				</li>
+				<li class="footer__item">
+					<a class="footer__link footer__link--yt" href="https://youtube.com" title="Ютьюб">
+						<span class="visuallyHidden">Ютьюб</span>
+					</a>
+				</li>
+			</ul>
+			<p class="footer__info">
+				<span class="footer__developer">Разработано</span>
+				<a class="footer__infoLink" href="#" title="Html Academy"></a>
+			</p>
 		</footer>
 	</main>
 </body>

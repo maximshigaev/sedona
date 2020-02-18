@@ -1,0 +1,32 @@
+.button {
+  display: block;
+  width: 280px;
+  height: 58px;
+  padding-top: 17px;
+
+  font-size: 21px;
+  text-align: center;
+  color: white;
+
+  background-color: $bluishColor;
+
+  &:hover,
+  &:focus {
+    background-color: $bluishHoverColor;
+  }
+
+  &:active {
+    background-color: $bluishActiveColor;
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    background-color: $inputHoverColor;
+  }
+}
+
+@media (min-width: $tabletScreen) {
+  .button {
+    width: 458px;
+  }
+}

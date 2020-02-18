@@ -220,9 +220,13 @@
   }
 }
 
-@media (min-width: $desctopScreen) {
+@media (min-width: $desktopScreen) {
   .header__link {
     padding-bottom: 17px;
+  }
+
+  .header__logoImage {
+    width: 187px;
   }
 
   .header__photoContainer {
