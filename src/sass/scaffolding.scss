@@ -47,16 +47,17 @@ h4,
 h5,
 h6,
 p,
+ul,
 button,
-legend {
+legend,
+input,
+fieldset,
+textarea {
   margin: 0;
   padding: 0;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
-
   list-style: none;
 }
 
@@ -67,16 +68,14 @@ a {
   outline: none;
 }
 
-fieldset {
-  margin: 0;
-  padding: 0;
-
-  border: none;
+input,
+textarea,
+button {
+  font: inherit;
 }
 
-input,
 textarea {
-  font: inherit;
+  resize: none;
 }
 
 img {
@@ -103,6 +102,18 @@ button {
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+.wrapper {
+  @media (min-width: $tabletScreen) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @media (min-width: $desktopScreen) {
+    padding-right: 120px;
+    padding-left: 120px;
+  }
 }
 
 .hidden {

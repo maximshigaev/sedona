@@ -43,52 +43,61 @@
 	<main class="formPage">
 		<div class="wrapper">
 			<section class="feedback">
-				<h1 class="feedback__title">Оставьте свой отзыв</h1>
+				<h1 class="feedback__heading">Оставьте свой отзыв</h1>
 				<p class="feedback__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных
 					вами достопримечательностях
 				</p>
 				<form class="feedback__form" action="https://echo.htmlacademy.ru/" method="POST">
 					<fieldset class="feedback__opinion">
 						<legend class="feedback__legend">Ваше общее впечатление:</legend>
-						<input class="visuallyHidden" type="radio" name="good" id="good" checked>
-						<label class="feedback__label" for="good">Скорее положительное</label>
-						<input class="visuallyHidden" type="radio" name="bad" id="bad">
-						<label class="feedback__label" for="bad">Скорее отрицательное</label>
-						<input class="visuallyHidden" type="radio" name="hard" id="hard">
-						<label class="feedback__label" for="hard">Затрудняюсь ответить</label>
+						<input class="visuallyHidden" type="radio" name="opinion" id="good" checked>
+						<label class="feedback__label feedback__label--radio" for="good">Скорее положительное</label>
+						<input class="visuallyHidden" type="radio" name="opinion" id="bad">
+						<label class="feedback__label feedback__label--radio" for="bad">Скорее отрицательное</label>
+						<input class="visuallyHidden" type="radio" name="opinion" id="hard">
+						<label class="feedback__label feedback__label--radio" for="hard">Затрудняюсь ответить</label>
 					</fieldset>
 					<fieldset class="feedback__personal">
 						<legend class="feedback__legend">Представьтесь:</legend>
-						<label class="feedback__title" for="firstName">Имя*:</label>
-						<input type="text" name="firstName" id="firstName" placeholder="Петр" required>
-						<label class="feedback__title" for="secondName">Фамилия*:</label>
-						<input type="text" name="secondName" id="secondName" placeholder="Иванов" required>
-						<label class="feedback__title" for="thirdName">Отчество:</label>
-						<input type="text" name="thirdName" id="thirdName" placeholder="Александрович">
+						<label class="feedback__title">Имя*:
+							<input type="text" name="firstName" placeholder="Петр" required>
+						</label>
+						<label class="feedback__title">Фамилия*:
+							<input type="text" name="secondName" placeholder="Иванов" required>
+						</label>
+						<label class="feedback__title">Отчество:
+							<input type="text" name="thirdName" placeholder="Александрович">
+						</label>
 					</fieldset>
 					<fieldset class="feedback__contacts">
 						<legend class="feedback__legend">Контактная информация:</legend>
-						<label class="feedback__title" for="tel">Телефон*:</label>
-						<input type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
-						<label class="feedback__title" for="email">Электронная почта*:</label>
-						<input type="email" name="email" id="email" placeholder="Введите e-mail" required>
+						<div class="feedback__subWrapper">
+							<label class="feedback__title" for="tel"><span>Контактный&nbsp;</span>Телефон*:</label>
+							<input type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
+							<label class="feedback__title" for="email">Электронная почта*:</label>
+							<input type="email" name="email" id="email" placeholder="Введите e-mail" required>
+						</div>
 					</fieldset>
 					<fieldset class="feedback__landmarks">
 						<legend class="feedback__legend">Посещенные достопримечательности:</legend>
-						<input class="visuallyHidden" type="checkbox" name="bridge" id="bridge" checked>
-						<label class="feedback__label" for="bridge">Мост Дьявола</label>
-						<input class="visuallyHidden" type="checkbox" name="mount" id="mount" checked>
-						<label class="feedback__label" for="mount">Гора-Колокол</label>
-						<input class="visuallyHidden" type="checkbox" name="park" id="park" checked>
-						<label class="feedback__label" for="park">Гора-Колокол</label>
-						<input class="visuallyHidden" type="checkbox" name="rocks" id="rocks">
-						<label class="feedback__label" for="rocks">Красные скалы</label>
+						<div class="feedback__subContainer">
+							<input class="visuallyHidden" type="checkbox" name="bridge" id="bridge" checked>
+							<label class="feedback__label feedback__label--checkbox" for="bridge">Мост Дьявола</label>
+							<input class="visuallyHidden" type="checkbox" name="mount" id="mount" checked>
+							<label class="feedback__label feedback__label--checkbox" for="mount">Гора-Колокол</label>
+							<input class="visuallyHidden" type="checkbox" name="park" id="park" checked>
+							<label class="feedback__label feedback__label--checkbox" for="park">Слайд парк</label>
+							<input class="visuallyHidden" type="checkbox" name="rocks" id="rocks">
+							<label class="feedback__label feedback__label--checkbox" for="rocks">Красные скалы</label>
+						</div>
 					</fieldset>
-					<p class="feedback__legend">Опишите свои эмоции:</p>
-					<textarea class="feedback__emotions" name="emotions"
-						placeholder="Опишите подробно все свои восторги "></textarea>
+					<div class="feedback__container">
+						<p class="feedback__legend">Опишите свои эмоции:</p>
+						<textarea class="feedback__emotions" name="emotions"
+							placeholder="Опишите подробно все свои восторги"></textarea>
+					</div>
 					<button class="button feedback__button" type="submit">Отправить отзыв</button>
-					<p class="feedback__clarity">*-обязательные поля</p>
+					<p class="feedback__clarity">* — обязательные поля</p>
 				</form>
 			</section>
 		</div>
