@@ -539,11 +539,7 @@
 
     &[for='email'] {
       &::before {
-        top: -16px;
-        left: -138px;
-
-        background-color: #e6e6e6;
-        background-image: url('../img/feedback/icon-phone.svg');
+        display: none;
       }
     }
 
@@ -577,19 +573,30 @@
     align-items: center;
     margin-right: -80px;
 
-    &::before {
+    &::before,
+    &::after {
       top: 0;
-      right: 80px;
 
       width: 58px;
       height: 58px;
 
       background-color: #e6e6e6;
-      background-image: url('../img/feedback/icon-mail.svg');
       background-repeat: no-repeat;
       background-position: center;
 
       @include pseudoElement();
+    }
+
+    &::before {
+      right: 80px;
+
+      background-image: url('../img/feedback/icon-mail.svg');
+    }
+
+    &::after {
+      left: calc(27px + (100% - 407px) / 2);
+
+      background-image: url('../img/feedback/icon-phone.svg');
     }
   }
 

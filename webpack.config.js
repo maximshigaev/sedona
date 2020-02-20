@@ -65,6 +65,17 @@ module.exports = {
 						outputPath: 'img/'
 					}
 				}
+			},
+			{
+				test: /\.(mov|mp4)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]'
+						}
+					}
+				]
 			}
 		]
 	},
@@ -89,7 +100,8 @@ module.exports = {
 		new CopyWebpackPlugin([
 			{from: './src/img', to: './img'},
 			{from: './src/fonts', to: './fonts'},
-			{from: './src/static', to: './static'}
+			{from: './src/static', to: './static'},
+			{from: './src/video', to: './video'}
 		])
 	],
 	resolve: {

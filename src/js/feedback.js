@@ -12,12 +12,18 @@ const validateForm = () => {
 	const invalidFields = [];
 
 	formFields.forEach((field) => {
-		field.style.border = `none`;
+		field.style.outline = `none`;
 
 		if (field.hasAttribute(`data-required`) && !field.value) {
-			field.style.border = `1px solid red`;
+			field.style.outline = `1px solid red`;
 			invalidFields.push(field);
 		}
+	});
+
+	invalidFields.forEach((field) => {
+		field.addEventListener(`focus`, function(evt) {
+			evt.target.style.outline = `none`;
+		});
 	});
 
 	isValid = (!invalidFields.length)
@@ -27,7 +33,9 @@ const validateForm = () => {
 
 const windowEscDownHandler = (evt) => {
 	if (evt.code === `Escape`) {
-		closeModal(document.querySelector(`.modal`));
+		isValid
+			? closeModal(successModal)
+			: closeModal(failureModal);
 	}
 };
 
@@ -60,6 +68,7 @@ const closeModal = (modal) => {
 
 	formFields.forEach((field) => {
 		field.disabled = false;
+		field.value = ``;
 	});
 
 	window.removeEventListener(`keydown`, windowEscDownHandler);
@@ -76,10 +85,4 @@ form.addEventListener(`submit`, function(evt) {
 
 failureBtn.addEventListener(`click`, () => closeModal(failureModal));
 
-successBtn.addEventListener(`click`, function() {
-	closeModal(successModal);
-
-	formFields.forEach((field) => {
-		field.value = ``;
-	});
-});
+successBtn.addEventListener(`click`, () => closeModal(successModal));

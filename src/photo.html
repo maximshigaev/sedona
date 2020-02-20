@@ -48,7 +48,7 @@
 					о политике и экономике.
 				</p>
 				<ul class="footage__list">
-					<li class="footage__item">
+					<li class="footage__item footage__item--main">
 						<picture class="footage__picture">
 							<source media="(min-width:1200px)" srcset="img/footage/photo-1-desktop.jpg">
 							<source media="(min-width:768px)" srcset="img/footage/photo-1-tablet.jpg">
@@ -62,7 +62,7 @@
 							<span class="footage__likes">1350</span>
 						</div>
 					</li>
-					<li class="footage__item">
+					<li class="footage__item footage__item--common">
 						<picture class="footage__picture">
 							<source media="(min-width:1200px)" srcset="img/footage/photo-2-desktop.jpg">
 							<source media="(min-width:768px)" srcset="img/footage/photo-2-tablet.jpg">
@@ -76,7 +76,7 @@
 							<span class="footage__likes">143</span>
 						</div>
 					</li>
-					<li class="footage__item">
+					<li class="footage__item footage__item--common">
 						<picture class="footage__picture">
 							<source media="(min-width:1200px)" srcset="img/footage/photo-3-desktop.jpg">
 							<source media="(min-width:768px)" srcset="img/footage/photo-3-tablet.jpg">
@@ -90,7 +90,7 @@
 							<span class="footage__likes">96</span>
 						</div>
 					</li>
-					<li class="footage__item">
+					<li class="footage__item footage__item--common">
 						<picture class="footage__picture">
 							<source media="(min-width:1200px)" srcset="img/footage/photo-4-desktop.jpg">
 							<source media="(min-width:768px)" srcset="img/footage/photo-4-tablet.jpg">
@@ -109,13 +109,16 @@
 				<p class="footage__content">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
 					очередной раз!
 				</p>
-				<picture class="footage__video">
+				<!-- <picture class="footage__video">
 					<source media="(min-width:1200px)" srcset="img/footage/video-desktop.jpg">
 					<source media="(min-width:1200px)" srcset="img/footage/video-tablet.jpg">
 					<img class="footage__preview" src="img/footage/video-mobile.jpg" alt="Видео о Седоне"
 						title="Видео о Седоне"
 					>
-				</picture>
+				</picture> -->
+				<video class="footage_video" width="500" height="300" poster="img/footage/video-mobile.jpg" autoplay controls>
+					<source src="video/01-components.mp4" type="video/mp4">
+				</video>
 				<p class="footage__videoDesc"></p>
 			</div>
 		</section>

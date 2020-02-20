@@ -116,6 +116,12 @@ button {
   }
 }
 
+.photoPage .wrapper {
+  @media (min-width: $desktopScreen) {
+    padding: 0;
+  }
+}
+
 .overlay {
   position: fixed;
   top: 0;
