@@ -60,10 +60,10 @@
 					<fieldset class="feedback__personal">
 						<legend class="feedback__legend">Представьтесь:</legend>
 						<label class="feedback__title">Имя*:
-							<input type="text" name="firstName" placeholder="Петр" required>
+							<input type="text" name="firstName" placeholder="Петр" data-required>
 						</label>
 						<label class="feedback__title">Фамилия*:
-							<input type="text" name="secondName" placeholder="Иванов" required>
+							<input type="text" name="secondName" placeholder="Иванов" data-required>
 						</label>
 						<label class="feedback__title">Отчество:
 							<input type="text" name="thirdName" placeholder="Александрович">
@@ -73,9 +73,9 @@
 						<legend class="feedback__legend">Контактная информация:</legend>
 						<div class="feedback__subWrapper">
 							<label class="feedback__title" for="tel"><span>Контактный&nbsp;</span>Телефон*:</label>
-							<input type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
+							<input type="tel" name="tel" id="tel" placeholder="Введите телефон" data-required>
 							<label class="feedback__title" for="email">Электронная почта*:</label>
-							<input type="email" name="email" id="email" placeholder="Введите e-mail" required>
+							<input type="email" name="email" id="email" placeholder="Введите e-mail" data-required>
 						</div>
 					</fieldset>
 					<fieldset class="feedback__landmarks">
@@ -128,14 +128,16 @@
 		<section class="hidden modal modal--failure">
 			<h2 class="modal__title">Что-то пошло не так!</h2>
 			<p class="modal__content">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-			<a class="button modal__button" href="#" title="Ок">Ок</a>
+			<button class="button modal__button" title="Ок">Ок</button>
 		</section>
 		<section class="hidden modal modal--success">
 			<h2 class="modal__title">Ваш отзыв отправлен!</h2>
 			<p class="modal__content">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
 				опубликуем его на сайте.
 			</p>
-			<a class="button modal__button" href="#"  title="Закрыть окно">Закрыть окно</a>
+			<div class="modal__container">
+				<button class="button modal__button" title="Закрыть окно">Закрыть окно</button>
+			</div>
 		</section>
 		<div class="hidden overlay"></div>
 	</main>
