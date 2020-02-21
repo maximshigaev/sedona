@@ -2,3 +2,15 @@
   content: '';
   position: absolute;
 }
+
+@mixin retinaTwoBgr($firstPath, $secondPath) {
+  @media (min-resolution: $retinaDpi), (min-resolution: $retinaDppx) {
+    background-image: url($firstPath), url($secondPath);
+  }
+}
+
+@mixin retinaOneBgr($path) {
+  @media (min-resolution: $retinaDpi), (min-resolution: $retinaDppx) {
+    background-image: url($path);
+  }
+}

@@ -7,6 +7,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include retinaOneBgr('../img/map/map-mobile@2x.jpg');
+
+
   &::before {
     top: 50%;
     left: 50%;
@@ -32,11 +35,15 @@
 @media (min-width: $tabletScreen) {
   .map {
     background-image: url('../img/map/map-tablet.jpg');
+
+    @include retinaOneBgr('../img/map/map-tablet@2x.jpg');
   }
 }
 
 @media (min-width: $desktopScreen) {
   .map {
     background-image: url('../img/map/map-desktop.jpg');
+
+    @include retinaOneBgr('../img/map/map-desktop@2x.jpg');
   }
 }

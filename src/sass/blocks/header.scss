@@ -88,11 +88,12 @@
   background-position: bottom, 50% top;
   background-size: contain, cover;
 
+  @include retinaTwoBgr('../img/header/bg-intro-triangle-mobile.svg', '../img/header/back-mobile@2x.jpg');
+
   &--inner {
     min-height: 158px;
     padding-top: 52px;
 
-    background-image: url('../img/header/bg-intro-triangle-mobile.svg'), url('../img/header/back-mobile.jpg');
     background-position: left bottom, 50% bottom;
     background-size: contain, auto;
   }
@@ -203,6 +204,8 @@
 
     background-image: url('../img/header/bg-intro-triangle-tablet.svg'), url('../img/header/back-desktop.jpg');
 
+    @include retinaTwoBgr('../img/header/bg-intro-triangle-tablet.svg', '../img/header/back-desktop@2x.jpg');
+
     &--inner {
       min-height: 290px;
       padding-top: 95px;
@@ -231,6 +234,8 @@
 
   .header__photoContainer {
     background-image: url('../img/header/bg-intro-triangle-desktop.svg'), url('../img/header/back-desktop.jpg');
+
+    @include retinaTwoBgr('../img/header/bg-intro-triangle-desktop.svg', '../img/header/back-desktop@2x.jpg');
 
     &--inner {
       min-height: 300px;

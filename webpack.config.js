@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 
 module.exports = {
 	entry: './src/index.js',
@@ -102,7 +103,8 @@ module.exports = {
 			{from: './src/fonts', to: './fonts'},
 			{from: './src/static', to: './static'},
 			{from: './src/video', to: './video'}
-		])
+		]),
+		new ImageminWebpWebpackPlugin()
 	],
 	resolve: {
 		extensions: ['.js', '.json', '.jsx', '*']

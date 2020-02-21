@@ -56,7 +56,9 @@
   background-image: url('../img/reasons/bg-triangle.svg'), url('../img/reasons/photo-city-mobile.jpg');
   background-repeat: no-repeat, no-repeat;
   background-position: top, bottom;
-  background-size: contain, auto;
+  background-size: contain, 520px;
+
+  @include retinaTwoBgr('../img/reasons/bg-triangle.svg', '../img/reasons/photo-city-mobile@2x.jpg');
 }
 
 .reasons__item--bottom .reasons__photoContainer {
@@ -66,6 +68,9 @@
   background-image: url('../img/reasons/photo-bridge-mobile.jpg');
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: 520px;
+
+  @include retinaOneBgr('../img/reasons/photo-bridge-mobile@2x.jpg');
 }
 
 .reasons__title {
@@ -243,6 +248,9 @@
 
     background-image: url('../img/reasons/photo-city-tablet.jpg');
     background-position: right;
+    background-size: 512px;
+
+    @include retinaOneBgr('../img/reasons/photo-city-tablet@2x.jpg');
   }
 
   .reasons__item--bottom .reasons__photoContainer {
@@ -253,6 +261,9 @@
 
     background-image: url('../img/reasons/photo-bridge-tablet.jpg');
     background-position: left;
+    background-size: 512px;
+
+    @include retinaOneBgr('../img/reasons/photo-bridge-tablet@2x.jpg');
   }
 
   .reasons__content {
@@ -372,7 +383,9 @@
     padding-left: 68px;
 
     background-image: url('../img/reasons/photo-city-desktop.jpg');
-    background-size: auto;
+    background-size: 800px;
+
+    @include retinaOneBgr('../img/reasons/photo-city-desktop@2x.jpg');
   }
 
   .reasons__item--bottom .reasons__photoContainer {
@@ -381,7 +394,9 @@
     padding-left: 893px;
 
     background-image: url('../img/reasons/photo-bridge-desktop.jpg');
-    background-size: auto;
+    background-size: 800px;
+
+    @include retinaOneBgr('../img/reasons/photo-bridge-desktop@2x.jpg');
   }
 
   .reasons__title {
