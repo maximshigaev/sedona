@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+	<link rel="preload" href="fonts/ptsans-regular-webfont.woff2" as="font">
+	<link rel="preload" href="fonts/ptsans-bold-webfont.woff2" as="font">
 	<title>Sedona</title>
 </head>
 <body>
@@ -74,6 +76,11 @@
 							<h2 class="footage__heading">Неродные просторы</h2>
 							<p class="footage__author">Автор фото: <cite>Борис</cite></p>
 							<span class="footage__likes">1350</span>
+							<button class="footage__button">
+								<svg width="23" height="21">
+									<use xlink:href="img/sprite.svg#like"></use>
+								</svg>
+							</button>
 						</div>
 					</li>
 					<li class="footage__item footage__item--common">
@@ -102,6 +109,11 @@
 							<h2 class="footage__heading">Местная растительность</h2>
 							<p class="footage__author">Автор фото: <cite>Сергей</cite></p>
 							<span class="footage__likes">143</span>
+							<button class="footage__button">
+								<svg width="23" height="21">
+									<use xlink:href="img/sprite.svg#like"></use>
+								</svg>
+							</button>
 						</div>
 					</li>
 					<li class="footage__item footage__item--common">
@@ -130,6 +142,11 @@
 							<h2 class="footage__heading">Дорога на север</h2>
 							<p class="footage__author">Автор фото: <cite>Петр</cite></p>
 							<span class="footage__likes">96</span>
+							<button class="footage__button">
+								<svg width="23" height="21">
+									<use xlink:href="img/sprite.svg#like"></use>
+								</svg>
+							</button>
 						</div>
 					</li>
 					<li class="footage__item footage__item--common">
@@ -157,6 +174,11 @@
 							<h2 class="footage__heading">Мост дьявола</h2>
 							<p class="footage__author">Автор фото: <cite>Антон</cite></p>
 							<span class="footage__likes">254</span>
+							<button class="footage__button">
+								<svg width="23" height="21">
+									<use xlink:href="img/sprite.svg#like"></use>
+								</svg>
+							</button>
 						</div>
 					</li>
 				</ul>
@@ -164,15 +186,34 @@
 				<p class="footage__content">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
 					очередной раз!
 				</p>
-				<video class="footage__video" poster="img/footage/video-mobile.jpg">
+			</div>
+		</section>
+		<section class="video">
+			<h2 class="visuallyHidden">Видео о Седоне</h2>
+			<div class="wrapper">
+				<video class="video__clip">
 					<source src="video/01-components.mp4" type="video/mp4">
 				</video>
-				<div class="footage__controls">
-					<button class="footage__play"></button>
-					<button class="footage__fullScreen"></button>
-					<button class="footage__subtitles"></button>
-					<div class="footage__pin"></div>
-					<div class="footage__line"></div>
+				<div class="video__panel">
+					<div class="video__pin"></div>
+					<div class="video__line"></div>
+					<div class="video__controls">
+						<button class="video__play">
+							<svg width="16" height="20">
+								<use xlink:href="img/sprite.svg#replay"></use>
+							</svg>
+						</button>
+						<button class="video__subtitles">
+							<svg width="32" height="20">
+								<use xlink:href="img/sprite.svg#subtitles"></use>
+							</svg>
+						</button>
+						<button class="video__fullScreen">
+							<svg width="20" height="20">
+								<use xlink:href="img/sprite.svg#fullScreen"></use>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -182,23 +223,36 @@
 		<ul class="footer__list">
 			<li class="footer__item">
 				<a class="footer__link footer__link--tw" href="https://twitter.com" title="Твиттер">
+					<svg width="18" height="14">
+						<use xlink:href="img/sprite.svg#twitter"></use>
+					</svg>
 					<span class="visuallyHidden">Твиттер</span>
 				</a>
 			</li>
 			<li class="footer__item">
 				<a class="footer__link footer__link--fb" href="https://facebook.com" title="Фейсбук">
+					<svg width="9" height="18">
+						<use xlink:href="img/sprite.svg#facebook"></use>
+					</svg>
 					<span class="visuallyHidden">Фейсбук</span>
 				</a>
 			</li>
 			<li class="footer__item">
 				<a class="footer__link footer__link--yt" href="https://youtube.com" title="Ютьюб">
+					<svg width="20" height="14">
+						<use xlink:href="img/sprite.svg#youtube"></use>
+					</svg>
 					<span class="visuallyHidden">Ютьюб</span>
 				</a>
 			</li>
 		</ul>
 		<p class="footer__info">
 			<span class="footer__developer">Разработано</span>
-			<a class="footer__infoLink" href="#" title="Html Academy"></a>
+			<a class="footer__infoLink" href="#" title="Html Academy">
+				<svg width="40" height="51">
+					<use xlink:href="img/sprite.svg#academy"></use>
+				</svg>
+			</a>
 		</p>
 	</footer>
 </body>

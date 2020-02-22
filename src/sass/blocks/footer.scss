@@ -10,7 +10,7 @@
 }
 
 .footer__list {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 
   font-size: 0;
   text-align: center;
@@ -35,8 +35,10 @@
   height: 100%;
 
   background-color: $bluishColor;
-  background-repeat: no-repeat;
-  background-position: center;
+
+  svg {
+    fill-opacity: 1;
+  }
 
   &:hover,
   &:focus {
@@ -45,52 +47,63 @@
 
   &:active {
     background-color: $bluishActiveColor;
-    opacity: 0.3;
+
+    svg {
+      fill-opacity: 0.3;
+    }
   }
 
   &--tw {
-    background-image: url('../img/footer/icon-twitter.svg');
+    padding-top: 13px;
   }
 
   &--fb {
-    background-image: url('../img/footer/icon-facebook.svg');
+    padding-top: 14px;
   }
 
   &--yt {
-    background-image: url('../img/footer/icon-youtube.svg');
+    padding-top: 13px;
   }
 }
 
 .footer__info {
   margin-bottom: 23px;
+
+  font-size: 0;
   text-align: center;
+
+  border: 1px solid transparent;
 }
 
 .footer__developer {
-  margin-right: 10px;
+  display: inline-block;
+  width: 91px;
 
   font-weight: 400;
+  font-size: 14px;
 }
 
 .footer__infoLink {
   display: inline-block;
   width: 27px;
   height: 34px;
+  margin-top: -25px;
 
   vertical-align: middle;
 
-  background-image: url('../img/footer/htmlacademy.svg');
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: 150%;
-
-  &:hover,
-  &:focus {
-    background-image: url('../img/footer/htmlacademy-hover.svg');
+  svg {
+    fill: #000000;
+    fill-opacity: 1;
   }
 
-  &:active {
-    background-image: url('../img/footer/htmlacademy-active.svg');
+  &:hover svg,
+  &:focus svg {
+    fill: $bluishColor;
+  }
+
+  &:active svg {
+    fill: #000000;
+    fill-opacity: 0.3;
   }
 }
 

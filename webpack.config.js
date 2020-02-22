@@ -73,7 +73,8 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: '[name].[ext]'
+							name: '[name].[ext]',
+							outputPath: 'video/'
 						}
 					}
 				]
@@ -102,7 +103,6 @@ module.exports = {
 			{from: './src/img', to: './img'},
 			{from: './src/fonts', to: './fonts'},
 			{from: './src/static', to: './static'},
-			{from: './src/video', to: './video'}
 		]),
 		new ImageminWebpWebpackPlugin()
 	],

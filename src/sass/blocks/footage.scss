@@ -34,6 +34,7 @@
 
 .footage__desctiption {
   text-align: left;
+  position: relative;
 }
 
 .footage__heading {
@@ -44,21 +45,19 @@
 }
 
 .footage__likes {
-  position: relative;
-
   padding-left: 37px;
+}
 
-  &::before {
-    left: 0;
+.footage__button {
+    position: absolute;
+	outline: none;
+	left: 0;
+	bottom: -3px;
+    background-color: transparent;
 
-    width: 23px;
-    height: 21px;
-
-    background-image: url('../img/footage/icon-like.svg');
-    background-repeat: no-repeat;
-    opacity: 0.3;
-
-    @include pseudoElement();
+  svg {
+    fill: #000000;
+    fill-opacity: 0.3;
   }
 }
 
@@ -177,6 +176,13 @@
 
     font-size: 30px;
   }
+
+  .footage__button {
+	right: 62px;
+	top: 28px;
+	left: auto;
+	bottom: auto;
+  }
 }
 
 @media (min-width: $desktopScreen) {
@@ -210,10 +216,9 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  .footage__likes {
-    &::before {
-      background-image: url('../img/footage/icon-like-desktop.svg');
-    }
+  .footage__button svg {
+    fill: #ffffff;
+    fill-opacity: 1;
   }
 
   .footage__heading,
