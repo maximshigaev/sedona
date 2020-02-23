@@ -61,18 +61,30 @@
 .header__closeButton {
   display: none;
 
-  background-image: url('../img/header/icon-cross.svg');
+  outline: none;
+
+  svg {
+    fill: #ffffff;
+  }
 
   &:active {
-    background-image: url('../img/header/icon-cross-active.svg');
+    svg {
+      fill: $bluishActiveColor;
+    }
   }
 }
 
 .header__openButton {
-  background-image: url('../img/header/icon-menu.svg');
+  outline: none;
+
+  svg {
+    fill: $bluishColor;
+  }
 
   &:active {
-    background-image: url('../img/header/icon-menu-active.svg');
+    svg {
+      fill: $bluishActiveColor;
+    }
   }
 }
 
@@ -110,16 +122,29 @@
 }
 
 @media (max-width: 767px) {
-  .header__list.no-js {
+  .header__list.no-js,
+  .header__list.openedMenu {
     display: block;
     padding-bottom: 56px;
   }
 
-  .header__list.no-js ~ .header__closeButton {
+  .header__list.closedMenu {
+    display: none;
+    padding-bottom: 0;
+  }
+
+  .header__list.no-js ~ .header__closeButton,
+  .header__list.closedMenu ~ .header__closeButton {
+    display: none;
+  }
+
+  .header__list.openedMenu ~ .header__closeButton,
+  .header__list.closedMenu ~ .header__openButton {
     display: block;
   }
 
-  .header__list.no-js ~ .header__openButton {
+  .header__list.no-js ~ .header__openButton,
+  .header__list.openedMenu ~ .header__openButton {
     display: none;
   }
 }

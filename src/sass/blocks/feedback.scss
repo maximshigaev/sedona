@@ -166,8 +166,7 @@
     @include pseudoElement();
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     &::before {
       background-color: $inputHoverColor;
     }
@@ -224,6 +223,13 @@
     border-radius: 50%;
 
     @include pseudoElement();
+  }
+}
+
+.feedback__opinion input[type='radio']:focus + .feedback__label,
+.feedback__landmarks input[type='checkbox']:focus + .feedback__label {
+  &::before {
+    background-color: $inputHoverColor;
   }
 }
 

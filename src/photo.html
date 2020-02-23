@@ -35,8 +35,16 @@
 						>
 				</picture>
 			</a>
-			<button class="header__openButton"></button>
-			<button class="header__closeButton"></button>
+			<button class="header__openButton">
+				<svg width="23" height="22">
+					<use xlink:href="img/sprite.svg#menu"></use>
+				</svg>
+			</button>
+			<button class="header__closeButton">
+				<svg width="23" height="22">
+					<use xlink:href="img/sprite.svg#cross"></use>
+				</svg>
+			</button>
 		</nav>
 		<div class="header__photoContainer header__photoContainer--inner">
 			<img class="header__textImage" src="img/header/text-sedona.svg" alt="Sedona">
@@ -192,24 +200,36 @@
 			<h2 class="visuallyHidden">Видео о Седоне</h2>
 			<div class="wrapper">
 				<video class="video__clip">
-					<source src="video/01-components.mp4" type="video/mp4">
+					<source src="video/2.mp4" type="video/mp4">
 				</video>
 				<div class="video__panel">
-					<div class="video__pin"></div>
-					<div class="video__line"></div>
+					<div class="video__line">
+						<div class="video__pin"></div>
+						<div class="video__currentLine"></div>
+					</div>
 					<div class="video__controls">
-						<button class="video__play">
+						<button class="video__play" type="button" title="Начать видео">
+							<svg width="16" height="20">
+								<use xlink:href="img/sprite.svg#play"></use>
+							</svg>
+						</button>
+						<button class="hidden video__pause" type="button" title="Остановить видео">
+							<svg width="16" height="20">
+								<use xlink:href="img/sprite.svg#pause"></use>
+							</svg>
+						</button>
+						<button class="hidden video__replay" type="button" title="Начать заново">
 							<svg width="16" height="20">
 								<use xlink:href="img/sprite.svg#replay"></use>
 							</svg>
 						</button>
 						<button class="video__subtitles">
-							<svg width="32" height="20">
+							<svg width="32" height="20" type="button" title="Включить субтитры">
 								<use xlink:href="img/sprite.svg#subtitles"></use>
 							</svg>
 						</button>
 						<button class="video__fullScreen">
-							<svg width="20" height="20">
+							<svg width="20" height="20" type="button" title="Развернуть на весь экран">
 								<use xlink:href="img/sprite.svg#fullScreen"></use>
 							</svg>
 						</button>

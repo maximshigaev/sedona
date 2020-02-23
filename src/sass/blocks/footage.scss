@@ -33,8 +33,9 @@
 }
 
 .footage__desctiption {
-  text-align: left;
   position: relative;
+
+  text-align: left;
 }
 
 .footage__heading {
@@ -49,11 +50,12 @@
 }
 
 .footage__button {
-    position: absolute;
-	outline: none;
-	left: 0;
-	bottom: -3px;
-    background-color: transparent;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+
+  background-color: transparent;
+  outline: none;
 
   svg {
     fill: #000000;
@@ -178,10 +180,10 @@
   }
 
   .footage__button {
-	right: 62px;
-	top: 28px;
-	left: auto;
-	bottom: auto;
+    top: 28px;
+    right: 62px;
+    bottom: auto;
+    left: auto;
   }
 }
 
