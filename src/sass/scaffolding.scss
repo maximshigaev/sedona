@@ -134,6 +134,19 @@ button {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.hint {
+  position: absolute;
+  z-index: 2;
+
+  padding: 20px;
+
+  font-weight: 700;
+  color: red;
+  text-transform: none;
+
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .hidden {
   display: none;
 }
