@@ -14,7 +14,15 @@ module.exports = {
 	},
 
 	devServer: {
-		overlay: true
+		overlay: true,
+        proxy: {
+            '/api/**': {
+                target: 'http://jsonplaceholder.typicode.com',
+                secure: false,
+				changeOrigin: true,
+				pathRewrite: { '^/api': '' }
+            }
+		}
 	},
 
 	devtool: 'cheap-module-eval-source-map',

@@ -57,6 +57,14 @@
   background-color: transparent;
   outline: none;
 
+  &:hover,
+  &:focus {
+    svg {
+      fill: green;
+      fill-opacity: 1;
+    }
+  }
+
   svg {
     fill: #000000;
     fill-opacity: 0.3;

@@ -49,6 +49,7 @@
 		"autoprefixer": "9.7.4",
 		"inputmask": "^5.0.3",
 		"npm-lifecycle": "3.1.4",
-		"path": "0.12.7"
+		"path": "0.12.7",
+		"regenerator-runtime": "^0.13.3"
 	}
 }

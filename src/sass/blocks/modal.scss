@@ -1,7 +1,4 @@
 .modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
   z-index: 4;
 
   width: 320px;
@@ -11,7 +8,8 @@
 
   background-color: white;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
-  transform: translate(-50%, -50%);
+
+  @include modal();
 
   &--failure {
     min-height: 280px;
