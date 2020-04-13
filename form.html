@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+	<link rel="preload" href="fonts/ptsans-regular-webfont.woff2" as="font">
+	<link rel="preload" href="fonts/ptsans-bold-webfont.woff2" as="font">
+	<title>Sedona</title>
+<link href="css/style.css" rel="stylesheet"></head>
+<body>
+	<header class="header">
+		<nav class="header__navigation">
+			<ul class="header__list no-js">
+				<li class="header__item">
+					<a class="header__link" href="index.html" title="Главная">Главная</a>
+				</li>
+				<li class="header__item">
+					<a class="header__link" href="photo.html" title="Фото и видео">Фото и видео</a>
+				</li>
+				<li class="header__item">
+					<a class="header__link header__link--current" href="#">Форма отзыва</a>
+				</li>
+				<li class="header__item">
+					<a class="header__link" href="#" title="Html Academy">Html Academy</a>
+				</li>
+			</ul>
+			<a class="header__logoLink" href="index.html">
+				<picture class="header__logo">
+					<source media="(min-width:1200px)" srcset="img/header/logo-sedona-desktop.svg">
+					<source media="(min-width:768px)" srcset="img/header/logo-sedona-tablet.svg">
+					<img class="header__logoImage" src="img/header/logo-sedona-mobile.svg" alt="Логотип Sedona"
+						title="Логотип Sedona"
+					>
+				</picture>
+			</a>
+			<button class="header__openButton">
+				<svg width="23" height="22">
+					<use xlink:href="img/sprite.svg#menu"></use>
+				</svg>
+			</button>
+			<button class="header__closeButton">
+				<svg width="23" height="22">
+					<use xlink:href="img/sprite.svg#cross"></use>
+				</svg>
+			</button>
+		</nav>
+		<div class="header__photoContainer header__photoContainer--inner">
+			<img class="header__textImage" src="img/header/text-sedona.svg" alt="Sedona">
+		</div>
+	</header>
+	<main class="formPage">
+		<div class="wrapper">
+			<section class="feedback">
+				<h1 class="feedback__heading">Оставьте свой отзыв</h1>
+				<p class="feedback__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных
+					вами достопримечательностях
+				</p>
+				<form class="feedback__form" action="" method="POST">
+					<fieldset class="feedback__opinion">
+						<legend class="feedback__legend">Ваше общее впечатление:</legend>
+						<input class="visuallyHidden" type="radio" name="opinion" id="good" >
+						<label class="feedback__label feedback__label--radio" for="good">Скорее положительное</label>
+						<input class="visuallyHidden" type="radio" name="opinion" id="bad">
+						<label class="feedback__label feedback__label--radio" for="bad">Скорее отрицательное</label>
+						<input class="visuallyHidden" type="radio" name="opinion" id="hard">
+						<label class="feedback__label feedback__label--radio" for="hard">Затрудняюсь ответить</label>
+					</fieldset>
+					<fieldset class="feedback__personal">
+						<legend class="feedback__legend">Представьтесь:</legend>
+						<label class="feedback__title">Имя*:
+							<input type="text" name="firstName" placeholder="Петр" data-required>
+						</label>
+						<label class="feedback__title">Фамилия*:
+							<input type="text" name="secondName" placeholder="Иванов" data-required>
+						</label>
+						<label class="feedback__title">Отчество:
+							<input type="text" name="thirdName" placeholder="Александрович">
+						</label>
+					</fieldset>
+					<fieldset class="feedback__contacts">
+						<legend class="feedback__legend">Контактная информация:</legend>
+						<div class="feedback__subWrapper">
+							<label class="feedback__title" for="tel"><span>Контактный&nbsp;</span>Телефон*:</label>
+							<input type="tel" name="tel" id="tel" placeholder="Введите телефон" data-required>
+							<label class="feedback__title" for="email">Электронная почта*:</label>
+							<input type="email" name="email" id="email" placeholder="Введите e-mail" data-required>
+						</div>
+					</fieldset>
+					<fieldset class="feedback__landmarks">
+						<legend class="feedback__legend">Посещенные достопримечательности:</legend>
+						<div class="feedback__subContainer">
+							<input class="visuallyHidden" type="checkbox" name="bridge" id="bridge" >
+							<label class="feedback__label feedback__label--checkbox" for="bridge">Мост Дьявола</label>
+							<input class="visuallyHidden" type="checkbox" name="mount" id="mount" >
+							<label class="feedback__label feedback__label--checkbox" for="mount">Гора-Колокол</label>
+							<input class="visuallyHidden" type="checkbox" name="park" id="park" >
+							<label class="feedback__label feedback__label--checkbox" for="park">Слайд парк</label>
+							<input class="visuallyHidden" type="checkbox" name="rocks" id="rocks">
+							<label class="feedback__label feedback__label--checkbox" for="rocks">Красные скалы</label>
+						</div>
+					</fieldset>
+					<div class="feedback__container">
+						<p class="feedback__legend">Опишите свои эмоции:</p>
+						<textarea class="feedback__emotions" name="emotions"
+							placeholder="Опишите подробно все свои восторги"></textarea>
+					</div>
+					<button class="button feedback__button" type="submit" title="Отправить отзыв">Отправить отзыв</button>
+					<p class="feedback__clarity">* — обязательные поля</p>
+				</form>
+			</section>
+		</div>
+		<footer class="footer">
+			<p class="footer__hashtag">#visitSEDONA</p>
+			<ul class="footer__list">
+				<li class="footer__item">
+					<a class="footer__link footer__link--tw" href="https://twitter.com" title="Твиттер">
+						<svg width="18" height="14">
+						<use xlink:href="img/sprite.svg#twitter"></use>
+					</svg>
+						<span class="visuallyHidden">Твиттер</span>
+					</a>
+				</li>
+				<li class="footer__item">
+					<a class="footer__link footer__link--fb" href="https://facebook.com" title="Фейсбук">
+						<svg width="9" height="18">
+						<use xlink:href="img/sprite.svg#facebook"></use>
+					</svg>
+						<span class="visuallyHidden">Фейсбук</span>
+					</a>
+				</li>
+				<li class="footer__item">
+					<a class="footer__link footer__link--yt" href="https://youtube.com" title="Ютьюб">
+						<svg width="20" height="14">
+						<use xlink:href="img/sprite.svg#youtube"></use>
+					</svg>
+						<span class="visuallyHidden">Ютьюб</span>
+					</a>
+				</li>
+			</ul>
+			<p class="footer__info">
+				<span class="footer__developer">Разработано</span>
+				<a class="footer__infoLink" href="#" title="Html Academy">
+					<svg width="40" height="51">
+						<use xlink:href="img/sprite.svg#academy"></use>
+					</svg>
+				</a>
+			</p>
+		</footer>
+		<section class="hidden modal modal--failure">
+			<h2 class="modal__title">Что-то пошло не так!</h2>
+			<p class="modal__content">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+			<button class="button modal__button" title="Ок">Ок</button>
+		</section>
+		<section class="hidden modal modal--success">
+			<h2 class="modal__title">Ваш отзыв отправлен!</h2>
+			<p class="modal__content">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
+				опубликуем его на сайте.
+			</p>
+			<div class="modal__container">
+				<button class="button modal__button" title="Закрыть окно">Закрыть окно</button>
+			</div>
+		</section>
+		<div class="hidden overlay"></div>
+	</main>
+<script type="text/javascript" src="./js/bundle.js"></script></body>
+</html>

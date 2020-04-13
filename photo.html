@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+	<link rel="preload" href="fonts/ptsans-regular-webfont.woff2" as="font">
+	<link rel="preload" href="fonts/ptsans-bold-webfont.woff2" as="font">
+	<title>Sedona</title>
+<link href="css/style.css" rel="stylesheet"></head>
+<body>
+	<header class="header">
+		<nav class="header__navigation">
+			<ul class="header__list no-js">
+				<li class="header__item">
+					<a class="header__link" href="index.html" title="Главная">Главная</a>
+				</li>
+				<li class="header__item">
+					<a class="header__link header__link--current" href="#">Фото и видео</a>
+				</li>
+				<li class="header__item">
+					<a class="header__link" href="form.html" title="Форма отзыва">Форма отзыва</a>
+				</li>
+				<li class="header__item">
+					<a class="header__link" href="#" title="Html Academy">Html Academy</a>
+				</li>
+			</ul>
+			<a class="header__logoLink" href="index.html">
+				<picture class="header__logo">
+					<source media="(min-width:1200px)" srcset="img/header/logo-sedona-desktop.svg">
+					<source media="(min-width:768px)" srcset="img/header/logo-sedona-tablet.svg">
+						<img class="header__logoImage" src="img/header/logo-sedona-mobile.svg" alt="Логотип Sedona"
+							title="Логотип Sedona"
+						>
+				</picture>
+			</a>
+			<button class="header__openButton">
+				<svg width="23" height="22">
+					<use xlink:href="img/sprite.svg#menu"></use>
+				</svg>
+			</button>
+			<button class="header__closeButton">
+				<svg width="23" height="22">
+					<use xlink:href="img/sprite.svg#cross"></use>
+				</svg>
+			</button>
+		</nav>
+		<div class="header__photoContainer header__photoContainer--inner">
+			<img class="header__textImage" src="img/header/text-sedona.svg" alt="Sedona">
+		</div>
+	</header>
+	<main class="photoPage">
+		<section class="footage">
+			<div class="wrapper">
+				<h1 class="footage__title">Фото и видео</h1>
+				<p class="footage__content">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть
+					о политике и экономике.
+				</p>
+				<ul class="footage__list">
+					<li class="footage__item footage__item--main">
+						<picture class="footage__picture">
+							<source type="image/webp" media="(min-width:1200px)"
+								srcset="img/footage/photo-1-desktop.webp 1x, img/footage/photo-1-desktop@2x.webp 2x"
+							>
+							<source type="image/webp" media="(min-width:768px)"
+								srcset="img/footage/photo-1-tablet.webp 1x, img/footage/photo-1-tablet@2x.webp 2x"
+							>
+							<source type="image/webp"
+								srcset="img/footage/photo-1-mobile.webp 1x, img/footage/photo-1-mobile@2x.webp 2x"
+							>
+							<source media="(min-width:1200px)"
+								srcset="img/footage/photo-1-desktop.jpg 1x, img/footage/photo-1-desktop@2x.jpg 2x"
+							>
+							<source media="(min-width:768px)"
+								srcset="img/footage/photo-1-tablet.jpg 1x, img/footage/photo-1-tablet@2x.jpg 2x"
+							>
+							<img class="footage__image" src="img/footage/photo-1-mobile.jpg"
+								srcset="img/footage/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы"
+								title="Неродные просторы"
+							>
+						</picture>
+						<div class="footage__desctiption">
+							<h2 class="footage__heading">Неродные просторы</h2>
+							<p class="footage__author">Автор фото: <cite>Борис</cite></p>
+							<span class="footage__likes">1350</span>
+							<button class="footage__button" title="Мне нравится">
+								<svg width="23" height="21">
+									<use xlink:href="img/sprite.svg#like"></use>
+								</svg>
+							</button>
+						</div>
+					</li>
+					<li class="footage__item footage__item--common">
+						<picture class="footage__picture">
+							<source type="image/webp" media="(min-width:1200px)"
+								srcset="img/footage/photo-2-desktop.webp 1x, img/footage/photo-2-desktop@2x.webp 2x"
+							>
+							<source type="image/webp" media="(min-width:768px)"
+								srcset="img/footage/photo-2-tablet.webp 1x, img/footage/photo-2-tablet@2x.webp 2x"
+							>
+							<source type="image/webp"
+								srcset="img/footage/photo-2-mobile.webp 1x, img/footage/photo-2-mobile@2x.webp 2x"
+							>
+							<source media="(min-width:1200px)"
+								srcset="img/footage/photo-2-desktop.jpg 1x, img/footage/photo-2-desktop@2x.jpg 2x"
+							>
+							<source media="(min-width:768px)"
+								srcset="img/footage/photo-2-tablet.jpg 1x, img/footage/photo-2-tablet@2x.jpg 2x"
+							>
+							<img class="footage__image" src="img/footage/photo-2-mobile.jpg"
+								srcset="img/footage/photo-2-mobile@2x.jpg 2x" alt="Местная растительность"
+								title="Местная растительность"
+							>
+						</picture>
+						<div class="footage__desctiption">
+							<h2 class="footage__heading">Местная растительность</h2>
+							<p class="footage__author">Автор фото: <cite>Сергей</cite></p>
+							<span class="footage__likes">143</span>
+							<button class="footage__button" title="Мне нравится">
+								<svg width="23" height="21">
+									<use xlink:href="img/sprite.svg#like"></use>
+								</svg>
+							</button>
+						</div>
+					</li>
+					<li class="footage__item footage__item--common">
+						<picture class="footage__picture">
+							<source type="image/webp" media="(min-width:1200px)"
+								srcset="img/footage/photo-3-desktop.webp 1x, img/footage/photo-3-desktop@2x.webp 2x"
+							>
+							<source type="image/webp" media="(min-width:768px)"
+								srcset="img/footage/photo-3-tablet.webp 1x, img/footage/photo-3-tablet@2x.webp 2x"
+							>
+							<source type="image/webp"
+								srcset="img/footage/photo-3-mobile.webp 1x, img/footage/photo-3-mobile@2x.webp 2x"
+							>
+							<source media="(min-width:1200px)"
+								srcset="img/footage/photo-3-desktop.jpg 1x, img/footage/photo-3-desktop@2x.jpg 2x"
+							>
+							<source media="(min-width:768px)"
+								srcset="img/footage/photo-3-tablet.jpg 1x, img/footage/photo-3-tablet@2x.jpg 2x"
+							>
+							<img class="footage__image" src="img/footage/photo-3-mobile.jpg"
+								srcset="img/footage/photo-3-mobile@2x.jpg 2x" alt="Дорога на север"
+								title="Дорога на север"
+							>
+						</picture>
+						<div class="footage__desctiption">
+							<h2 class="footage__heading">Дорога на север</h2>
+							<p class="footage__author">Автор фото: <cite>Петр</cite></p>
+							<span class="footage__likes">96</span>
+							<button class="footage__button" title="Мне нравится">
+								<svg width="23" height="21">
+									<use xlink:href="img/sprite.svg#like"></use>
+								</svg>
+							</button>
+						</div>
+					</li>
+					<li class="footage__item footage__item--common">
+						<picture class="footage__picture">
+							<source type="image/webp" media="(min-width:1200px)"
+								srcset="img/footage/photo-4-desktop.webp 1x, img/footage/photo-4-desktop@2x.webp 2x"
+							>
+							<source type="image/webp" media="(min-width:768px)"
+								srcset="img/footage/photo-4-tablet.webp 1x, img/footage/photo-4-tablet@2x.webp 2x"
+							>
+							<source type="image/webp"
+								srcset="img/footage/photo-4-mobile.webp 1x, img/footage/photo-4-mobile@2x.webp 2x"
+							>
+							<source media="(min-width:1200px)"
+								srcset="img/footage/photo-4-desktop.jpg 1x, img/footage/photo-4-desktop@2x.jpg 2x"
+							>
+							<source media="(min-width:768px)"
+								srcset="img/footage/photo-4-tablet.jpg 1x, img/footage/photo-4-tablet@2x.jpg 2x"
+							>
+							<img class="footage__image" src="img/footage/photo-4-mobile.jpg"
+								srcset="img/footage/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола" title="Мост дьявола"
+							>
+						</picture>
+						<div class="footage__desctiption">
+							<h2 class="footage__heading">Мост дьявола</h2>
+							<p class="footage__author">Автор фото: <cite>Антон</cite></p>
+							<span class="footage__likes">254</span>
+							<button class="footage__button" title="Мне нравится">
+								<svg width="23" height="21">
+									<use xlink:href="img/sprite.svg#like"></use>
+								</svg>
+							</button>
+						</div>
+					</li>
+				</ul>
+				<p class="footage__question">Все еще сомневаетесь?</p>
+				<p class="footage__content">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+					очередной раз!
+				</p>
+			</div>
+		</section>
+		<section class="video">
+			<h2 class="visuallyHidden">Видео о Седоне</h2>
+			<div class="wrapper">
+				<video class="video__clip">
+					<source src="video/2.mp4" type="video/mp4">
+				</video>
+				<div class="video__panel">
+					<div class="video__line">
+						<div class="video__pin"></div>
+						<div class="video__currentLine"></div>
+					</div>
+					<div class="video__controls">
+						<button class="video__play" type="button" title="Начать видео">
+							<svg width="16" height="20">
+								<use xlink:href="img/sprite.svg#play"></use>
+							</svg>
+						</button>
+						<button class="hidden video__pause" type="button" title="Остановить видео">
+							<svg width="16" height="20">
+								<use xlink:href="img/sprite.svg#pause"></use>
+							</svg>
+						</button>
+						<button class="hidden video__replay" type="button" title="Начать заново">
+							<svg width="16" height="20">
+								<use xlink:href="img/sprite.svg#replay"></use>
+							</svg>
+						</button>
+						<button class="video__subtitles">
+							<svg width="32" height="20" type="button" title="Включить субтитры">
+								<use xlink:href="img/sprite.svg#subtitles"></use>
+							</svg>
+						</button>
+						<button class="video__fullScreen">
+							<svg width="20" height="20" type="button" title="Развернуть на весь экран">
+								<use xlink:href="img/sprite.svg#fullScreen"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<p class="footer__hashtag">#visitSEDONA</p>
+		<ul class="footer__list">
+			<li class="footer__item">
+				<a class="footer__link footer__link--tw" href="https://twitter.com" title="Твиттер">
+					<svg width="18" height="14">
+						<use xlink:href="img/sprite.svg#twitter"></use>
+					</svg>
+					<span class="visuallyHidden">Твиттер</span>
+				</a>
+			</li>
+			<li class="footer__item">
+				<a class="footer__link footer__link--fb" href="https://facebook.com" title="Фейсбук">
+					<svg width="9" height="18">
+						<use xlink:href="img/sprite.svg#facebook"></use>
+					</svg>
+					<span class="visuallyHidden">Фейсбук</span>
+				</a>
+			</li>
+			<li class="footer__item">
+				<a class="footer__link footer__link--yt" href="https://youtube.com" title="Ютьюб">
+					<svg width="20" height="14">
+						<use xlink:href="img/sprite.svg#youtube"></use>
+					</svg>
+					<span class="visuallyHidden">Ютьюб</span>
+				</a>
+			</li>
+		</ul>
+		<p class="footer__info">
+			<span class="footer__developer">Разработано</span>
+			<a class="footer__infoLink" href="#" title="Html Academy">
+				<svg width="40" height="51">
+					<use xlink:href="img/sprite.svg#academy"></use>
+				</svg>
+			</a>
+		</p>
+	</footer>
+<script type="text/javascript" src="./js/bundle.js"></script></body>
+</html>
