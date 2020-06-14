@@ -21,3 +21,8 @@ The primary target of this project was to work on the implementation of the resp
 ### Achieved personal goals
 - To train the skill of implementing of the responsive website.
 - To deepen the understanding and knowledge of libraries and technologies listed above and to utilize them in practice.
+
+### Usage
+First of all, you should clone or download this repository on your local machine. After that, open your terminal and run
+`npm run build` to create an optimized production build or `npm run dev` to create a build used in development.
+`npm run build` will also open this project in your browser.
